@@ -90,11 +90,13 @@ MongoDB runs at:
 
 Environment variables required in `.env`:
 
+NODE_ENV=development
 PORT=5000
-MONGO_URI=mongodb://localhost:27017/assign_db
-JWT_ACCESS_SECRET=your_access_secret
-JWT_REFRESH_SECRET=your_refresh_secret
-CLIENT_ORIGIN=http://localhost:3000
+MONGO_URI=mongodb://mongo:27017/assign_db
+JWT_ACCESS_SECRET=<your private key>
+JWT_REFRESH_SECRET=<your diff private key>
+CLIENT_ORIGIN=http://localhost:5173
+
 
 yaml
 Copy code
@@ -102,10 +104,8 @@ Copy code
 Install dependencies:
 
 npm install
-npm start
+npm run dev
 
-yaml
-Copy code
 
 ---
 
@@ -153,64 +153,6 @@ yaml
 Copy code
 4. Backend verifies token in middleware  
 5. Access granted  
-
----
-
-# 📘 Deployment Options
-
-### **Backend**
-You can deploy using:
-- Render.com  
-- Railway.app  
-- Docker container on any VPS  
-
-### **Frontend**
-Deploy to:
-- Netlify  
-- Vercel  
-- GitHub Pages  
-
-For assignment, you may provide:
-✔ GitHub repository link  
-✔ Optional deployed link  
-
-Both are acceptable.
-
----
-
-# 📈 Scalability Notes (Required for Assignment)
-
-This architecture is designed to scale:
-
-### **🔹 Horizontal Scalability**
-- Backend can run multiple instances behind a load balancer  
-- Stateless JWT authentication allows easy scaling  
-
-### **🔹 Database Scalability**
-- MongoDB supports sharding & replica sets  
-- Mongoose schema can evolve without downtime  
-
-### **🔹 Caching (Optional Enhancement)**
-- Redis could store frequently accessed tasks  
-- Or used for rate limiting  
-
-### **🔹 Microservices Ready**
-- Auth and Tasks can be separated into services  
-- API gateway for routing  
-
-### **🔹 Dockerized Environment**
-- Same environment across machines  
-- Easy CI/CD deployment  
-
----
-
-# 🎯 Final Deliverables
-
-✔ Backend hosted on GitHub  
-✔ Frontend hosted on GitHub  
-✔ README.md (this file)  
-✔ Optional live demo (Netlify / Render)  
-✔ Postman collection or Swagger docs  
 
 ---
 
