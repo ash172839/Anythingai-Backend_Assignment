@@ -59,10 +59,7 @@ The objective was to create a **secure, scalable REST API** with authentication,
 
 ---
 
-## 🗂 Folder Structure
 
-
----
 
 # 🐳 Running the Backend (Docker)
 
