@@ -72,9 +72,6 @@ Make sure Docker Desktop is running.
 cd backend
 docker-compose up --build
 
-yaml
-Copy code
-
 Backend runs at:  
 ➡ **http://localhost:5000**
 
@@ -98,9 +95,6 @@ JWT_REFRESH_SECRET=<your diff private key>
 CLIENT_ORIGIN=http://localhost:5173
 
 
-yaml
-Copy code
-
 Install dependencies:
 
 npm install
@@ -114,9 +108,6 @@ npm run dev
 cd front-end
 npm install
 npm run dev
-
-yaml
-Copy code
 
 Frontend runs at:  
 ➡ **http://localhost:5173**
@@ -149,8 +140,7 @@ Frontend runs at:
 3. Each protected request sends:  
 Authorization: Bearer <token>
 
-yaml
-Copy code
+
 4. Backend verifies token in middleware  
 5. Access granted  
 
